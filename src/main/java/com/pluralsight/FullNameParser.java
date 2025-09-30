@@ -7,8 +7,9 @@ public class FullNameParser {
     public static void main(String[] args) {
         System.out.println("Please enter your name");
         String name = scanner.nextLine();
+        String preTrim = name.trim();
 
-        String[] testName = name.split("\\ ");
+        String[] testName = preTrim.split("\\s+ ");
 
         if(testName.length == 3) {
             System.out.println("First Name: " + testName[0]);
@@ -19,13 +20,5 @@ public class FullNameParser {
             System.out.println("Middle name: (none)");
             System.out.println("Last Name: " + testName[1]);
         }
-
-//        int index = 0;
-//        while(index < testName.length){
-//            System.out.println(testName[index]);
-//            index++;
-//        }
-
-
     }
 }
